@@ -1,0 +1,72 @@
+<ion-view hide-nav-bar="true" title="开业活动">
+    <!--<ion-header-bar class="bar-stable bar-assertive" style="background-color: #e50500;">-->
+    <!--<h1 class="title">开业庆典</h1>-->
+    <!--</ion-header-bar>-->
+    <ion-content>
+        <img src="img/title.png" alt="开业秀" style="width: 100%"/>
+
+        <div class="row row-center padding-horizontal">
+            <div class="col col-20 col-offset-10">
+                <img src="img/2015_jion_longsgo.png">
+            </div>
+            <div class="col col-40">
+                <p class="text-center">
+                    快速扩大企业知名度<br/>
+                    覆盖多区域网购群体<br/>
+                    网络营销的理想途径
+                </p>
+            </div>
+        </div>
+        </div>
+        <form name="frmUser">
+            <div class="list padding-horizontal">
+                <label class="item item-input row" ng-class="{ 'has-error' : !frmUser.mobile.$pristine && frmUser.mobile.$invalid}">
+                    <span class="input-label text-center">手机号码</span>
+                    <i class="icon ion-alert-circled placeholder-icon assertive" ng-show="!frmUser.mobile.$pristine && frmUser.mobile.$invalid"></i>
+                    <input type="tel" ng-model="vm.user.mobile" name="mobile"
+                           required ng-pattern="/^0?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}$/"
+                           placeholder="请输入11位手机号码">
+                </label>
+                <div class="form-errors text-right" ng-messages="frmUser.mobile.$error" ng-show="!frmUser.mobile.$pristine && frmUser.mobile.$invalid">
+                    <div class="form-error" ng-message="required">手机号码为必填项</div>
+                    <div class="form-error" ng-message="pattern">该号码为无效号码</div>
+                </div>
+                <label class="item item-input row" ng-class="{ 'has-error' : !frmUser.email.$pristine && frmUser.email.$invalid}">
+                    <span class="input-label text-center">安全邮箱</span>
+                    <i class="icon ion-alert-circled placeholder-icon assertive" ng-show="!frmUser.email.$pristine && frmUser.email.$invalid"></i>
+                    <input type="email" ng-model="vm.user.email" name="email"
+                           required ng-pattern="/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/"
+                           placeholder="请输入有效邮箱地址">
+                </label>
+                <div class="form-errors text-right" ng-messages="frmUser.email.$error" ng-show="!frmUser.email.$pristine && frmUser.email.$invalid">
+                    <div class="form-error" ng-message="required">邮箱地址为必填项</div>
+                    <div class="form-error" ng-message="pattern">该邮箱地址无效</div>
+                </div>
+                <label class="item item-input validated row" ng-class="{ 'has-error' : !frmUser.shopName.$pristine && frmUser.shopName.$invalid}">
+                    <span class="input-label text-center">网店名称</span>
+                    <i class="icon ion-alert-circled placeholder-icon assertive" ng-show="!frmUser.shopName.$pristine && frmUser.shopName.$invalid"></i>
+                    <input type="text" ng-model="vm.user.shopName" name="shopName"
+                           required ng-minlength="4" ng-maxlength="20"
+                           placeholder="请输入您的网店名称">
+                </label>
+                <div class="form-errors text-right" ng-messages="frmUser.shopName.$error" ng-show="!frmUser.shopName.$pristine && frmUser.shopName.$invalid">
+                    <div class="form-error" ng-message="required">网店名称为必填项</div>
+                    <div class="form-error" ng-message="minlength">您的网站名称最少需要4个字</div>
+                    <div class="form-error" ng-message="maxlength">您的网站名称最多不能超过20个字</div>
+                </div>
+                <button class="item button button-block button-assertive" style="background-color: #e50500;"
+                        ng-disabled="frmUser.mobile.$invalid || frmUser.email.$invalid || frmUser.shopName.$invalid"
+                        ng-click="vm.submit(vm.user)">
+                    提交申请
+                </button>
+            </div>
+        </form>
+        <div class="row padding-horizontal">
+            <div class="col">
+                您所需要做的只是输入您的【手机号码】/【安全邮箱】/【网店名称】，您即可在龙水购电商平台上拥有自己的网店。<br>
+                稍后还将会有专业人员对您的网店进行指导和管理，让您的产品拥有更广的销售渠道。
+                <h3>期待您的加入！</h3>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

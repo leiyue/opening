@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+.scroll-content {
+    background: url("../img/background.png");
+}
+
+label.item.has-error {
+    border-bottom: 2px solid red;
+}
+
+.form-errors {
+    margin: 5px 0
+}
+
+.form-error {
+    padding: 2px 0 2px 16px;
+    color: red;
+}
+
+.button.button-custom {
+    background-color: #e50500;
+    color: #fff;
+}
