@@ -10,13 +10,12 @@
                 <img src="img/2015_jion_longsgo.png">
             </div>
             <div class="col col-40">
-                <p class="text-center">
+                <p class="text-center light">
                     快速扩大企业知名度<br/>
                     覆盖多区域网购群体<br/>
                     网络营销的理想途径
                 </p>
             </div>
-        </div>
         </div>
         <form name="frmUser">
             <div class="list padding-horizontal">
@@ -54,18 +53,16 @@
                     <div class="form-error" ng-message="minlength">您的网站名称最少需要4个字</div>
                     <div class="form-error" ng-message="maxlength">您的网站名称最多不能超过20个字</div>
                 </div>
-                <button class="item button button-block button-assertive" style="background-color: #e50500;"
-                        ng-disabled="frmUser.mobile.$invalid || frmUser.email.$invalid || frmUser.shopName.$invalid"
-                        ng-click="vm.submit(vm.user)">
-                    提交申请
+                <button ng-disabled="frmUser.mobile.$invalid || frmUser.email.$invalid || frmUser.shopName.$invalid"
+                        ng-click="vm.submit(vm.user)" class="item button button-block button-energized">
                 </button>
             </div>
         </form>
         <div class="row padding-horizontal">
-            <div class="col">
+            <div class="col light">
                 您所需要做的只是输入您的【手机号码】/【安全邮箱】/【网店名称】，您即可在龙水购电商平台上拥有自己的网店。<br>
                 稍后还将会有专业人员对您的网店进行指导和管理，让您的产品拥有更广的销售渠道。
-                <h3>期待您的加入！</h3>
+                <h3 class="light">期待您的加入！</h3>
             </div>
         </div>
     </ion-content>

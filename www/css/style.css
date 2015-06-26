@@ -1,6 +1,7 @@
 /* Empty. Add your own CSS if you like */
 .scroll-content {
-    background: url("../img/background.png");
+    background: url("../img/background.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
 label.item.has-error {
